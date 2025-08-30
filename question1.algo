@@ -1,0 +1,20 @@
+FUNCTION sum_of_sets(set1,set2) : 
+VAR
+    set1=[]
+    set2=[]
+    combined_elements=[]
+    distinct_elements=[]
+    i,n,sum; INTEGER
+BEGIN
+    combined_elemnets=set1+set2
+    n=read(combined_elements);
+    sum=0
+    FOR i IN combined_elements:    
+        FOR i FROM 0 TO n-1 STEP 1 DO:
+            IF combined_elements[i] != combined_elements[i]:
+                distinct_elements.append(i)
+            ENDIF
+        ENDFOR
+    ENDFOR
+    RETURN SUM(distinct_elements)
+END
