@@ -1,0 +1,23 @@
+PROCEDURE check_orthogonality(pairs[])
+VAR
+    pairs=[]
+    v1=[]
+    v2=[]
+    n,ps,i; INTEGER
+BEGIN
+    Input: pairs[1..k] 
+    Output: For each pair, print if the vectors are orthogonal or not
+    For i <- 0 to k do  // Iterate over each pair of vectors
+        v1 <- pairs[i][1]  // First vector of the pair
+        v2 <- pairs[i][2]  // Second vector of the pair
+        n <- size(v1)  // Size of the vectors (assuming both have the same size)
+            
+        ps <- dot_product(v1, v2, n)  // Call the dot_product procedure
+
+        If ps == 0 then  // Check if dot product is zero
+            Print "Vectors are orthogonal"
+        Else
+            Print "Vectors are NOT orthogonal"
+        EndIf
+    EndFor
+END
